@@ -1,3 +1,4 @@
+#!/bin/bash
 cd $(dirname $0)
 killall conky
 mkdir ~/.fonts > /dev/null 2>&1 

@@ -1,3 +1,4 @@
+#!/bin/bash
 pocitadlo=1
 pozicia_y=20
 pozicia_x=1400
@@ -11,14 +12,17 @@ do
 if [ "${nic/$substring}" = "$nic" ] ; then
 #  echo "${substring} is not in ${nic}"
 vyska=137
+eth=./components/default_eth.conf
 else
 #  echo "${substring} was found in ${nic}"
 vyska=183
+eth=./components/default_wifi.conf
 fi
 (( min_vyska = vyska -40))
 #echo $min_vyska
   #echo $pocitadlo $pozicia_y $nic
-  source ./components/create_nic_conf.sh $nic $pozicia_x $pozicia_y $min_sirka $min_vyska
+ # source ./components/create_nic_conf.sh $nic $pozicia_x $pozicia_y $min_sirka $min_vyska
+  source ./components/create_conf.sh default $nic $pozicia_x $pozicia_y $min_sirka $min_vyska network
   (( pozicia_y += vyska ))
   (( pocitadlo += 1 ))
 done
