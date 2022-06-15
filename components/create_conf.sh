@@ -48,5 +48,6 @@ if [[ $flag = "last" ]];
 then
     echo "conky -q -c $auto_file" >> $auto_config
 else
-    echo "conky -q -c $auto_file |" >> $auto_config
+    #echo "conky -q -c $auto_file |" >> $auto_config
+    echo "conky -q -c $auto_file &" >> $auto_config
 fi
