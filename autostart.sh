@@ -4,6 +4,7 @@ killall conky
 #rm -r ./auto_generated/auto_*
 rm -r ./auto_generated
 mkdir ./auto_generated
+#pridane kvoli rozlozeniu monitorov
 offset_x=3840
 offset_y=0
 
