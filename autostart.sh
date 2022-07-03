@@ -19,21 +19,21 @@ dve_tretiny=$((tretina + tretina))
 source ./components/create_conf.sh screen screen $((offset_x+0)) $((offset_y+0)) $res_x $res_y
 
 #prva tretina
-source ./components/create_conf.sh default network $((offset_x+dve_tretiny+20)) 10 $sirka_okna 30
-source ./components/scan_nic.sh default $((offset_x+dve_tretiny+20)) 70 $sirka_okna 0
-source ./components/create_conf.sh default process $((offset_x+dve_tretiny+20)) 620 $sirka_okna 30
+source ./components/create_conf.sh default network $((offset_x+dve_tretiny+20)) $((offset_y+10)) $sirka_okna 30
+source ./components/scan_nic.sh default $((offset_x+dve_tretiny+20)) $((offset_y+70)) $sirka_okna 0
+source ./components/create_conf.sh default process $((offset_x+dve_tretiny+20)) $((offset_y+620)) $sirka_okna 30
 
 #druha tretina
-source ./components/create_conf.sh default system_info $((offset_x+tretina+20)) 10 $sirka_okna 100 
-source ./components/create_conf.sh default storage $((offset_x+tretina+20)) 300 $sirka_okna 300
-source ./components/create_conf.sh default memory $((offset_x+tretina+20)) 597 $sirka_okna 300 
+source ./components/create_conf.sh default system_info $((offset_x+tretina+20)) $((offset_y+10)) $sirka_okna 100 
+source ./components/create_conf.sh default storage $((offset_x+tretina+20)) $((offset_y+300)) $sirka_okna 300
+source ./components/create_conf.sh default memory $((offset_x+tretina+20)) $((offset_y+597)) $sirka_okna 300 
 
 #tretia tretina
-source ./components/create_conf.sh default port_monitor $((offset_x+10)) 10 $sirka_okna 300
-source ./components/create_conf.sh default cpu $((offset_x+10)) 650 $sirka_okna 300
+source ./components/create_conf.sh default port_monitor $((offset_x+10)) $((offset_y+10)) $sirka_okna 300
+source ./components/create_conf.sh default cpu $((offset_x+10)) $((offset_y+650)) $sirka_okna 300
 
 #spodna polovica
-source ./components/create_conf.sh default logs $((offset_x+20)) 1020 1880 300 last
+source ./components/create_conf.sh default logs $((offset_x+20)) $((offset_y+1020)) 1880 300 last
 
 # run conky
 source ./auto_generated/auto_config.sh
