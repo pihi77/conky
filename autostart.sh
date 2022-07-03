@@ -1,7 +1,9 @@
 #!/bin/bash
 cd $(dirname $0)
 killall conky
-rm -r ./auto_generated/auto_*
+#rm -r ./auto_generated/auto_*
+rm -r ./auto_generated
+mkdir ./auto_generated
 offset_x=3840
 offset_y=0
 
