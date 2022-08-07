@@ -1,11 +1,11 @@
 #!/bin/bash
 cd $(dirname $0)
-killall conky
+#killall conky
 #rm -r ./auto_generated/auto_*
 rm -r ./auto_generated
-mkdir ./auto_generated
+mkdir -m 777 ./auto_generated
 #pridane kvoli rozlozeniu monitorov
-offset_x=3840
+offset_x=1919
 offset_y=0
 
 res_x=$(cat /sys/class/graphics/*/virtual_size | cut -d"," -f1)
